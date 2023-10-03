@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            /* border: 1px solid #008AAA;
+            box-sizing: border-box;
+            padding: 40px; */
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .navbar a {
+            font-size: 15px;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #ffffff;
+            color: #D1884F;
+        }
+
+        .navbar a.active {
+            background-color: orange;
+            color: white;
+        }
+
+        .navbar i {
+            font-size: 14px;
+            margin-right: 6px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px 30px 20px 120px;
+            text-align: left;
+        }
+        a.home1 {
+                      color: #D1884F;
+
+        }
+        
+        .text p {
+    font-size: 15px; 
+    /* color: #000; */
+   /* / font-weight: bold;  */
+}
+        .h1-Style {
+            color: #008AAA;
+        }
+
+        .h3-Style {
+            font-weight: normal;
+            color: #3BBADB;
+        }
+
+        .engineer {
+            color: #D1884F;
+        }
+        .img-container {
+    position: relative;
+    float: right;
+    margin-right: 30px;
+    top: 30px;
+}
+
+.img-container img {
+    float: right;
+    width: 75%; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 0 0 0 200px;
+}
+
+.img-container::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    /* left: 50px; */
+    right: 20px;
+    width: 80%;
+    height: 373px; /* Adjust the height as needed */
+    border-radius: 0 0 0 200px; /* Adjust the border-radius for the left side border */
+    background-color: #3bbbdb63;
+    z-index: -1;
+}
+
+
+
+
+
+
+        .more {
+            display: none;
+            color: #333;
+        }
+
+        .see-more {
+            cursor: pointer;
+            color: #008AAA;
+        }
+
+        .see-more:hover + .more {
+            display: block;
+        }
+
+        .button {
+            padding: 10px 40px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-top: 40px; 
+        }
+
+        .button1 {
+            background-color: #008AAA;
+            color: white;
+            font-size: 17px;
+            margin-right: 10px; 
+        }
+
+        .button2 {
+            border: 1px solid #008AAA;
+            background-color: white;
+            color: #008AAA;
+            font-size: 17px;
+        }
+
+    
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .text {
+                padding: 20px;
+            }
+
+            .img-container {
+                order: -1;
+                max-width: 80%;
+            }
+            .img-container::after{
+              
+                max-height: 90%;
+            }
+            .navbar {
+                text-align: center;
+                padding-right: 0;
+            }
+        }
+ 
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#home" class="home1"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about"><i class="fas fa-user"></i> About Me</a>
+        <a href="#contact"><i class="fas fa-phone"></i> Contact Me</a>
+        
+      </div>
+      
+
+      <div class="container">
+        <div class="text">
+            <h3 class="h3-Style">Welcome to my site</h3>
+            <h1 class="h1-Style">Hi, I'm Noor Shanteer, a  Computer <span class="engineer"> Engineer</span></h1>
+            <p >
+                I'm an engineer, a graduate from An-Najah National University, love to specialized in front-end sector.
+                <span class="see-more">See More</span>
+                <span class="more">
+                    A highly motivated computer engineer, driven by a relentless enthusiasm for innovation, actively seeking out fresh challenges and transformative opportunities to forge a successful and gratifying path in the ever-evolving landscape of the tech industry.
+                </span>
+            </p>
+            
+            <div class="buttons">
+                <button class="button button1">Hire me !</button>
+                <button class="button button2">See My Projects</button>
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="img.jpg" alt="">
+           
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>
