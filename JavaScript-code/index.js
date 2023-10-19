@@ -1,22 +1,15 @@
-function missingNumber(nums) {
-    const n = nums.length;
-    const expectedSum = (n * (n + 1)) / 2;
-    const actualSum = nums.reduce(function(accumulator, currentNumber) {
-      return accumulator + currentNumber;
-    }, 0);
-
-    if (new Set(nums).size !== n || nums.some(num => num > n)) {
-      console.log("Error: Duplicate number or number greater than n found.");
-      return null; 
+function twoSum(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
     }
-
-    const missingNumber = expectedSum - actualSum;
-
-    return missingNumber;
+  }
+  return [];
 }
-const nums =  [9,6,4,2,3,5,7,0,1];
 
-const missing = missingNumber(nums);
-if (missing !== null) {
-  console.log(missing); 
-}
+const nums = [2, 7, 11, 15];
+const target = 18;
+const result = twoSum(nums, target);
+console.log(result); 
